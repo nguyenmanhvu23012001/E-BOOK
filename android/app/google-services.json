@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "367815994571",
+    "project_id": "e-book-99516",
+    "storage_bucket": "e-book-99516.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367815994571:android:dcd5adba325f4ff06fff4e",
+        "android_client_info": {
+          "package_name": "com.example.youtube_ecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367815994571-64a4t4oeog9hf5rkd79c6717fmn3osp1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUaFTeAnfle0CFba1GVDNnX4pJAbhc6yo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367815994571-64a4t4oeog9hf5rkd79c6717fmn3osp1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
