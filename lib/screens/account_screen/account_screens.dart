@@ -12,11 +12,7 @@ import 'package:youtube_ecommerce/screens/order_screen/order_screen.dart';
 import 'package:youtube_ecommerce/widgets/primary_button/primary_button.dart';
 
 import '../../provider/app_provider.dart';
-<<<<<<< HEAD
-import '../auth_ui/login/login.dart';
-=======
-import '../auth_ui/welcome/welcome.dart';
->>>>>>> 0495526804fd2d01f6d6abe807582eb9b14de489
+
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -120,17 +116,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 ),
                 ListTile(
                   onTap: ()async {
-<<<<<<< HEAD
                      await FirebaseAuth.instance.signOut();
-=======
-                    try {
-                     FirebaseAuthHelper.instance.signOut();
-                     Routes.instance.pushAndRemoveUntil(widget:const Welcome(), context: context);
-                    } catch (e) {
-                      print('Error signing out: $e');
-                    }
-                    setState(() {});
->>>>>>> 0495526804fd2d01f6d6abe807582eb9b14de489
                   },
                   leading: const Icon(Icons.exit_to_app),
                   title: const Text("Đăng xuất"),

@@ -28,6 +28,7 @@ class _HomeState extends State<Home> {
     AppProvider appProvider = Provider.of<AppProvider>(context, listen: false);
     appProvider.getUserInfoFirebase();
     getCategoryList();
+    print(productModelList.length);
     super.initState();
   }
 
@@ -50,10 +51,13 @@ class _HomeState extends State<Home> {
   TextEditingController search = TextEditingController();
   List<ProductModel> searchList = [];
   void searchProducts(String value) {
+
     searchList = productModelList
         .where((element) =>
             element.name.toLowerCase().contains(value.toLowerCase()))
         .toList();
+    print("-->");
+    print(searchList.length);
     setState(() {});
   }
 
@@ -78,11 +82,7 @@ class _HomeState extends State<Home> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-<<<<<<< HEAD
                         const TopTitles(subtitle: "", title: "E-book"),
-=======
-                        const TopTitles(subtitle: "", title: "E Commerce"),
->>>>>>> 0495526804fd2d01f6d6abe807582eb9b14de489
                         TextFormField(
                           controller: search,
                           onChanged: (String value) {
@@ -181,12 +181,13 @@ class _HomeState extends State<Home> {
                                   itemBuilder: (ctx, index) {
                                     ProductModel singleProduct =
                                         searchList[index];
+                                    return _buildProductcard( singleProduct);
 
                                   }),
                             )
                           : productModelList.isEmpty
                               ? const Center(
-                                  child: Text("Best Product is empty"),
+                                  child: Text("Sản phẩm bán chạy trống"),
                                 )
                               : Padding(
                                   padding: const EdgeInsets.all(12.0),
@@ -205,7 +206,7 @@ class _HomeState extends State<Home> {
                                       itemBuilder: (ctx, index) {
                                         ProductModel singleProduct =
                                             productModelList[index];
-<<<<<<< HEAD
+
                                         return Container(
                                           decoration: BoxDecoration(
                                             borderRadius:
@@ -271,9 +272,7 @@ class _HomeState extends State<Home> {
                                             ],
                                           ),
                                         );
-=======
-                                        return _buildProductcard(singleProduct);
->>>>>>> 0495526804fd2d01f6d6abe807582eb9b14de489
+
                                       }),
                                 ),
                   const SizedBox(
@@ -315,7 +314,7 @@ class _HomeState extends State<Home> {
             ),
           ),
           Text(
-              "Price: \$${singleProduct.price}",style: TextStyle(fontSize: 12)),
+              "Giá: \$${singleProduct.price}",style: TextStyle(fontSize: 12)),
           SizedBox(
             height: 25,
             width: 70,
@@ -328,7 +327,7 @@ class _HomeState extends State<Home> {
                     context: context);
               },
               child: const Text(
-                "Buy",
+                "Mua",
               ),
             ),
           ),
